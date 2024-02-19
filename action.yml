@@ -1,39 +1,39 @@
-name: "Build, Push, and Release a Docker container to Heroku."
+name: "Build, Push and Release a Docker container to Heroku."
 author: "FokusDotId"
-description: "Build, Push, and Release a Docker container to Heroku"
+description: "Build, Push and Release a Docker container to Heroku."
 inputs:
-	heroku_app_name:
-		description: "Name of the Heroku application to which the build is to be sent."
-		required: true
-	heroku_email:
-		description: "the Email address associated with your Heroku account"
-		required: true
-	heroku_api_key:
-		description: "Heroku API Key associated with provided user's email."
-		required: true
-	heroku_skip_release:
-		description: "Determine if Heroku release phase should be skiped."
-		required: false
-		default: false
-	dockerfile_name:
-		description: "Dockerfile name. [default=Dockerfile]"
-		required: false
-		default: "Dockerfile"
-	dockerfile_directory:
-		description: "Dockerfile directory. [default=./]"
-		required: false
-		default: "./"
-	build_options:
-		description: "Additional options of docker build command."
-		required: false
-		default: ""
-	process_type:
-		description: "Select process type for which you want docker container to be uploaded. [default=web]"
-		required: false
-		default: "web"
+  heroku_app_name:
+    description: "Name of the Heroku application to which the build is to be sent."
+    required: true
+  heroku_email:
+    description: "The email address associated with your Heroku account."
+    required: true
+  heroku_api_key:
+    description: "Heroku API key associated with provided user's email."
+    required: true
+  heroku_skip_release:
+    description: "Determine if Heroku release phase should be skiped."
+    required: false
+    default: false
+  dockerfile_directory:
+    description: "Dockerfile directory. [default=./"
+    required: true
+    default: "./"
+  dockerfile_name:
+    description: "Dockerfile name. [default=Dockerfile]"
+    required: false
+    default: "Dockerfile"
+  build_options:
+    description: "Additional options of docker build command"
+    required: false
+    default: ""
+  process_type:
+    description: "Select process type for wich you want docker container to be uploaded. [default=web]"
+    required: false
+    default: "web"
 branding:
-	icon: server
-	color: purple
+  icon: server
+  color: purple
 runs:
-	uses: "node16"
-	main: "src/index.js"
+  using: "node16"
+  main: "src/index.js"
