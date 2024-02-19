@@ -56,10 +56,10 @@ try {
     console.log("Successfully pushed!");
     
     /** Skiped release after true **/
-    if (skipRelease) return;
-    
-    /** Releasing to heroku apps **/
-    await docker.release();
+    if (!skipRelease) {
+    	/** Releasing to heroku apps **/
+    	await docker.release();
+    };
     
     info("Successfully deployed!");
 } catch (err) {
