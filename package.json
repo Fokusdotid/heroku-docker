@@ -1,6 +1,6 @@
 {
   "name": "heroku-docker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Build, Push, and Release a Docker container to heroku",
   "main": "dist/index.js",
   "private": true,
