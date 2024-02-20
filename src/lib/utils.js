@@ -29,7 +29,7 @@ export default class Utils {
         const parts = command.split(" ").filter(part => Boolean(part));
         if (!parts.length) throw new Error("Wrong command provided");
         return new Promise((resolve, reject) => {
-            const args = parth.slice(1, parts.length);
+            const args = parts.slice(1, parts.length);
             const processEnv = new Object(process.env);
             const commandEnv = Object.assign(processEnv, env);
             

@@ -58,7 +58,7 @@ try {
     /** Skiped release after true **/
     if (!skipRelease) {
     	/** Releasing to heroku apps **/
-    	await docker.release();
+        await docker.release();
     };
     
     info("Successfully deployed!");
