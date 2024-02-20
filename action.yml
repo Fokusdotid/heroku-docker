@@ -1,5 +1,6 @@
 name: "build and push release docker to heroku"
 author: "FokusDotId"
+main: "dist/index.js"
 description: "Build, Push and Release a Docker container to Heroku."
 inputs:
   heroku_app_name:
