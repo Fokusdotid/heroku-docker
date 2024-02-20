@@ -1,4 +1,4 @@
-name: "Build, Push and Release a Docker container to Heroku."
+name: "Build, Push and Release a Docker container to Heroku"
 author: "FokusDotId"
 description: "Build, Push and Release a Docker container to Heroku."
 inputs:
